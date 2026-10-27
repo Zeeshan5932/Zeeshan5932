@@ -80,6 +80,9 @@
 @keyframes roleSwap{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@keyframes resumeFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(1deg) translateY(-10px)}}
 @media(max-width:700px){.hero-roles{margin-bottom:20px;align-items:flex-start;flex-direction:column;gap:5px}.hero-roles strong{min-width:0}.resume-layout{grid-template-columns:1fr;gap:48px}.resume-paper{min-height:370px;width:min(100%,320px);margin:0 auto}.resume-copy{order:1}.resume-preview{order:2}}
 @media(prefers-reduced-motion:reduce){.hero-roles strong,.resume-paper{animation:none}}
+.social-rail{position:fixed;left:20px;bottom:30px;z-index:95;display:flex;flex-direction:column;align-items:center;gap:12px}.social-rail:before{content:'';height:70px;width:1px;background:var(--line)}.social-rail a{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);background:rgba(15,15,14,.75);color:var(--gold-bright);font-size:11px;transition:transform .25s,background .25s,border-color .25s}.social-rail a:hover{transform:translateY(-3px) scale(1.08);background:rgba(214,173,112,.14);border-color:var(--gold)}.social-rail a[aria-label]{position:relative}.social-rail a[aria-label]:hover:after{content:attr(aria-label);position:absolute;left:44px;white-space:nowrap;padding:6px 8px;background:#1b1711;color:var(--gold-bright);font-size:9px;letter-spacing:.5px;border:1px solid var(--line)}
+@media(max-width:700px){.social-rail{position:relative;left:auto;bottom:auto;flex-direction:row;justify-content:center;padding:24px 22px 0}.social-rail:before{height:1px;width:38px}.social-rail a[aria-label]:hover:after{display:none}}
+.blog-section{background:#0d0e0f;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.blog-controls{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:26px 0 22px;flex-wrap:wrap}.blog-search{min-height:44px;min-width:250px;padding:0 14px;border:1px solid var(--line);background:#121313;color:var(--white);outline:0}.blog-filters{display:flex;gap:7px;flex-wrap:wrap}.blog-filter{padding:9px 12px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:10px}.blog-filter.active,.blog-filter:hover{background:var(--gold-bright);border-color:var(--gold-bright);color:#17120c}.blog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.blog-card{background:#141515;border:1px solid var(--line-soft);overflow:hidden;transition:transform .3s,border-color .3s}.blog-card:hover{transform:translateY(-5px);border-color:rgba(235,187,115,.62)}.blog-card img{width:100%;height:150px;object-fit:cover}.blog-card-body{padding:22px}.blog-card small{color:var(--gold);font-size:9px;letter-spacing:1.2px}.blog-card h3{margin:10px 0 8px;font:700 23px/1.2 var(--font-head)}.blog-card p{color:var(--muted);font-size:12px;line-height:1.75;margin:0 0 18px}.blog-card a{color:var(--gold-bright);font-size:11px;font-weight:700}.blog-empty{grid-column:1/-1;color:var(--muted);padding:30px;border:1px solid var(--line)}.blog-cta{margin-top:52px;padding-top:37px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}.blog-cta p{max-width:500px;color:var(--muted);font-size:13px}.blog-cta h3{font:700 clamp(28px,4vw,47px)/1.1 var(--font-head);margin:0}.blog-cta h3 em{font-family:Georgia,serif;color:var(--gold-bright);font-weight:400}.blog-cta-actions{display:flex;flex-wrap:wrap;gap:10px}@media(max-width:700px){.blog-grid{grid-template-columns:1fr}.blog-search{width:100%;min-width:0}.blog-cta{display:block}.blog-cta-actions{margin-top:20px}}
 
 </style>
   <title>Zeeshan Younas | AI Engineer & Creative Technologist</title>
@@ -89,6 +92,7 @@
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
   <div class="ambient-noise" aria-hidden="true"></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <aside class="social-rail" aria-label="Social links"><a href="https://github.com/Zeeshan5932" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a><a href="https://www.linkedin.com/in/zeeshan-younas-919a09253/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a><a href="https://www.kaggle.com/zeeshanyounas001" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">K</a><a href="mailto:zeeshanyounas443@gmail.com" aria-label="Email">@</a></aside>
   <input id="photoPicker" class="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" aria-label="Choose your portrait photo">
 
   <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -120,12 +124,12 @@
     <div class="container header-inner">
       <a href="#home" class="brand" aria-label="Zeeshan Younas home"><span class="brand-monogram">Z<span>Y</span><i>.</i></span><span class="brand-name">ZEESHAN <b>YOUNAS</b><small>AI ENGINEER</small></span></a>
       <nav class="desktop-nav" aria-label="Main menu">
-        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Work</a><a href="#experience">Journey</a><a href="#resume">Resume</a><a href="#kaggle">Kaggle</a><a href="#contact">Contact</a>
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#cv">CV</a><a href="#blog">Blog</a>
       </nav>
       <div class="header-right"><a class="header-connect" href="mailto:zeeshanyounas443@gmail.com">Let's talk <svg><use href="#icon-up"/></svg></a><button class="menu-button" type="button" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation menu"><svg><use href="#icon-bars"/></svg></button></div>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile menu" inert>
-      <a href="#about">About <span>01</span></a><a href="#expertise">Expertise <span>02</span></a><a href="#work">Selected work <span>03</span></a><a href="#experience">Experience <span>04</span></a><a href="#resume">Resume <span>05</span></a><a href="#kaggle">Kaggle <span>06</span></a><a href="#contact">Contact <span>07</span></a>
+      <a href="#home">Home <span>01</span></a><a href="#about">About <span>02</span></a><a href="#services">Services <span>03</span></a><a href="#portfolio">Portfolio <span>04</span></a><a href="#cv">CV <span>05</span></a><a href="#blog">Blog <span>06</span></a>
     </nav>
   </header>
 
@@ -169,7 +173,7 @@
       <div class="stats" id="stats"><div class="stat reveal"><b><span class="counter" data-value="2">2</span><em>+</em></b><p>YEARS OF AI ENGINEERING</p></div><div class="stat reveal" style="--delay:.08s"><b>~<span class="counter" data-value="70">70</span><em>%</em></b><p>LESS MANUAL WORK THROUGH AUTOMATION</p></div><div class="stat reveal" style="--delay:.16s"><b>~<span class="counter" data-value="10">10</span><em>%</em></b><p>INVENTORY COST REDUCTION CONTRIBUTED TO</p></div><div class="stat reveal" style="--delay:.24s"><b><span class="counter" data-value="223">223</span><em></em></b><p>KAGGLE CODE ENTRIES · PROFILE LISTING</p></div></div>
     </div></section>
 
-    <section class="section expertise" id="expertise" aria-labelledby="expertiseTitle"><div class="container">
+    <section class="section expertise" id="services" aria-labelledby="expertiseTitle"><div class="container">
       <div class="eyebrow reveal"><span>02</span> THE TOOLKIT <i></i> EXPERTISE</div>
       <div class="section-heading reveal"><h2 id="expertiseTitle" class="section-title">Deep skills.<br><em>Practical solutions.</em></h2><p>The technologies and engineering disciplines I use to build intelligent, production-oriented systems.</p></div>
       <div class="expertise-grid">
@@ -182,7 +186,7 @@
       </div>
     </div></section>
 
-    <section class="section work" id="work" aria-labelledby="workTitle"><div class="container">
+    <section class="section work" id="portfolio" aria-labelledby="workTitle"><div class="container">
       <div class="eyebrow reveal"><span>03</span> SELECTED CASE STUDIES <i></i> PROJECTS</div>
       <div class="section-heading work-heading reveal"><h2 id="workTitle" class="section-title">Proof in the<br><em>projects.</em></h2><p>Selected engineering case studies. Each visual is an original concept illustration — replace it with an actual product screenshot anytime.</p></div>
       <div class="work-filters reveal" role="group" aria-label="Filter projects"><button class="filter active" type="button" data-filter="all" aria-pressed="true">All projects <span>04</span></button><button class="filter" type="button" data-filter="agents" aria-pressed="false">AI agents</button><button class="filter" type="button" data-filter="llm" aria-pressed="false">LLM / RAG</button><button class="filter" type="button" data-filter="ml" aria-pressed="false">ML / Data</button><button class="filter" type="button" data-filter="vision" aria-pressed="false">Computer vision</button></div>
@@ -205,7 +209,7 @@
     </div></section>
 
 
-    <section class="section resume-section" id="resume" aria-labelledby="resumeTitle"><div class="container resume-layout"><div class="resume-copy reveal"><div class="eyebrow"><span>05</span> THE DOCUMENT <i></i> RESUME</div><h2 id="resumeTitle" class="section-title">A clear record of<br><em>how I build.</em></h2><p>Explore the verified experience, projects, and engineering focus behind this portfolio.</p><div class="resume-actions"><a class="btn btn-gold magnetic" href="assets/Zeeshan_Younas_CV.pdf" target="_blank" rel="noopener noreferrer">View resume <svg><use href="#icon-up"/></svg></a><a class="btn btn-ghost" href="assets/Zeeshan_Younas_CV.pdf" download>Download resume PDF <svg><use href="#icon-download"/></svg></a></div><div class="resume-highlights"><span>AI / ML ENGINEERING</span><span>RAG SYSTEMS</span><span>PRODUCTION AUTOMATION</span></div></div><div class="resume-preview reveal" style="--delay:.12s"><div class="resume-paper" aria-label="Resume preview"><small>ZEESHAN YOUNAS / CV</small><h3>AI<br>Engineer</h3><p>LLMs · Agents · Applied ML</p><div class="resume-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div><span class="resume-seal">ZY</span></div></div></div></section>
+    <section class="section resume-section" id="cv" aria-labelledby="resumeTitle"><div class="container resume-layout"><div class="resume-copy reveal"><div class="eyebrow"><span>05</span> THE DOCUMENT <i></i> RESUME</div><h2 id="resumeTitle" class="section-title">A clear record of<br><em>how I build.</em></h2><p>Explore the verified experience, projects, and engineering focus behind this portfolio.</p><div class="resume-actions"><a class="btn btn-gold magnetic" href="assets/Zeeshan_Younas_CV.pdf" target="_blank" rel="noopener noreferrer">View resume <svg><use href="#icon-up"/></svg></a><a class="btn btn-ghost" href="assets/Zeeshan_Younas_CV.pdf" download>Download resume PDF <svg><use href="#icon-download"/></svg></a></div><div class="resume-highlights"><span>AI / ML ENGINEERING</span><span>RAG SYSTEMS</span><span>PRODUCTION AUTOMATION</span></div></div><div class="resume-preview reveal" style="--delay:.12s"><div class="resume-paper" aria-label="Resume preview"><small>ZEESHAN YOUNAS / CV</small><h3>AI<br>Engineer</h3><p>LLMs · Agents · Applied ML</p><div class="resume-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div><span class="resume-seal">ZY</span></div></div></div></section>
 
     <section class="section kaggle-section" id="kaggle" aria-labelledby="kaggleTitle">
       <div class="kaggle-bg-star" aria-hidden="true">✳</div>
@@ -224,7 +228,9 @@
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contactTitle"><div class="contact-halo" aria-hidden="true"></div><div class="container contact-inner"><div class="eyebrow reveal"><span>06</span> NEXT CHAPTER <i></i> GET IN TOUCH</div><div class="contact-body reveal"><span class="contact-star">✳</span><p class="label-mini">HAVE A PROJECT IN MIND?</p><h2 id="contactTitle">Let's create<br><em>something remarkable.</em></h2><p>Have a challenge involving intelligent agents, automation, RAG or computer vision? I'm always interested in meaningful AI ideas and engineering collaborations.</p><a class="contact-address" href="mailto:zeeshanyounas443@gmail.com">zeeshanyounas443@gmail.com <svg><use href="#icon-up"/></svg></a><div class="contact-buttons"><a href="mailto:zeeshanyounas443@gmail.com?subject=AI%20Project%20Inquiry" class="btn btn-gold magnetic">Start a conversation <svg><use href="#icon-up"/></svg></a><button class="copy-email" id="copyEmail" type="button"><svg><use href="#icon-copy"/></svg><span>Copy email</span></button></div></div><div class="contact-bottom reveal"><span>BASED IN LAHORE, PAKISTAN</span><span>ENGINEERED WITH PURPOSE.</span></div></div></section>
+    <section class="section blog-section" id="blog" aria-labelledby="blogTitle"><div class="container"><div class="eyebrow reveal"><span>06</span> NOTES &amp; FIELD WORK <i></i> BLOG</div><div class="section-heading reveal"><h2 id="blogTitle" class="section-title">Ideas for building<br><em>useful intelligence.</em></h2><p>Markdown-backed writing on AI engineering, agents, retrieval, and the practical work between prototype and product.</p></div><div class="blog-controls reveal"><input class="blog-search" id="blogSearch" type="search" placeholder="Search articles" aria-label="Search articles"><div class="blog-filters" role="group" aria-label="Filter blog categories"><button class="blog-filter active" type="button" data-blog-filter="all">All</button><button class="blog-filter" type="button" data-blog-filter="Agentic AI">Agentic AI</button><button class="blog-filter" type="button" data-blog-filter="LLMs &amp; RAG">LLMs &amp; RAG</button></div></div><div class="blog-grid" id="blogGrid" aria-live="polite"></div><div class="blog-cta reveal"><div><h3>Have an intelligent<br><em>problem to solve?</em></h3><p>Start a conversation about an agent, retrieval system, automation workflow, or applied ML product.</p></div><div class="blog-cta-actions"><a class="btn btn-gold magnetic" href="mailto:zeeshanyounas443@gmail.com?subject=AI%20Project%20Inquiry">Email Zeeshan <svg><use href="#icon-up"/></svg></a><a class="btn btn-ghost" href="BLOG_GUIDE.md">Publishing guide</a></div></div></div></section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle"><div class="contact-halo" aria-hidden="true"></div><div class="container contact-inner"><div class="eyebrow reveal"><span>07</span> NEXT CHAPTER <i></i> GET IN TOUCH</div><div class="contact-body reveal"><span class="contact-star">✳</span><p class="label-mini">HAVE A PROJECT IN MIND?</p><h2 id="contactTitle">Let's create<br><em>something remarkable.</em></h2><p>Have a challenge involving intelligent agents, automation, RAG or computer vision? I'm always interested in meaningful AI ideas and engineering collaborations.</p><a class="contact-address" href="mailto:zeeshanyounas443@gmail.com">zeeshanyounas443@gmail.com <svg><use href="#icon-up"/></svg></a><div class="contact-buttons"><a href="mailto:zeeshanyounas443@gmail.com?subject=AI%20Project%20Inquiry" class="btn btn-gold magnetic">Start a conversation <svg><use href="#icon-up"/></svg></a><button class="copy-email" id="copyEmail" type="button"><svg><use href="#icon-copy"/></svg><span>Copy email</span></button></div></div><div class="contact-bottom reveal"><span>BASED IN LAHORE, PAKISTAN</span><span>ENGINEERED WITH PURPOSE.</span></div></div></section>
   </main>
 
   <footer class="footer"><div class="container"><div class="footer-main"><a href="#home" class="footer-logo">ZEESHAN<span>.</span></a><div class="footer-links"><a href="https://www.linkedin.com/in/zeeshan-younas-919a09253/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/Zeeshan5932" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.kaggle.com/zeeshanyounas001" target="_blank" rel="noopener noreferrer">Kaggle ↗</a></div></div><div class="footer-lower"><span>© <span id="currentYear">2026</span> ZEESHAN YOUNAS. ALL RIGHTS RESERVED.</span><span>DESIGNED IN BLACK &amp; GOLD ✦</span><a href="#home">BACK TO TOP ↑</a></div></div></footer>
@@ -275,6 +281,34 @@
     }, 2600);
   }
 
+  const blogGrid=$('#blogGrid'),blogSearch=$('#blogSearch');
+  const fallbackPosts=[
+    {title:'Building RAG Systems That Stay Useful',category:'LLMs & RAG',date:'2026-10-27',readingTime:'5 min',excerpt:'Retrieval quality, grounded answers, and the small product decisions that make a RAG assistant genuinely useful.',featuredImage:'assets/blog-rag.svg',slug:'building-rag-systems-that-stay-useful'},
+    {title:'From Automation to Agentic Workflows',category:'Agentic AI',date:'2026-10-27',readingTime:'4 min',excerpt:'A practical way to decide when a deterministic workflow should become an agentic system.',featuredImage:'assets/blog-agents.svg',slug:'from-automation-to-agentic-workflows'}
+  ];
+  let blogPosts=fallbackPosts,blogFilter='all';
+  const renderBlog=()=>{
+    if(!blogGrid)return;
+    const query=(blogSearch?.value||'').trim().toLowerCase();
+    const visible=blogPosts.filter(post=>(blogFilter==='all'||post.category===blogFilter)&&[post.title,post.category,post.excerpt].join(' ').toLowerCase().includes(query));
+    blogGrid.replaceChildren(...visible.map(post=>{const card=document.createElement('article');card.className='blog-card reveal';const image=document.createElement('img');image.src=post.featuredImage;image.alt='';image.loading='lazy';const body=document.createElement('div');body.className='blog-card-body';const meta=document.createElement('small');meta.textContent=`${post.category} · ${post.date} · ${post.readingTime}`;const title=document.createElement('h3');title.textContent=post.title;const excerpt=document.createElement('p');excerpt.textContent=post.excerpt;const link=document.createElement('a');link.href=`blog/posts/${post.slug}.html`;link.textContent='Read more ↗';body.append(meta,title,excerpt,link);card.append(image,body);return card;}));
+    if(!visible.length){const empty=document.createElement('p');empty.className='blog-empty';empty.textContent='No article matches this search.';blogGrid.append(empty);}
+  };
+  blogSearch?.addEventListener('input',renderBlog);
+  $$('.blog-filter').forEach(button=>button.addEventListener('click',()=>{blogFilter=button.dataset.blogFilter;$$('.blog-filter').forEach(item=>item.classList.toggle('active',item===button));renderBlog();}));
+  renderBlog();
+  if(location.protocol==='http:'||location.protocol==='https:')fetch('blog/posts.json',{cache:'no-store'}).then(response=>response.ok?response.json():[]).then(posts=>{if(Array.isArray(posts)&&posts.length){blogPosts=posts;renderBlog();}}).catch(()=>{});
+  const serviceContent=[
+    ['Agentic AI Development','Stateful agents, tool calling, and reliable multi-step workflows for complex business tasks.',['LangGraph','LangChain','Tool Calling']],
+    ['RAG Chatbot Development','Grounded assistants that search private knowledge, cite sources, and stay within their context.',['RAG','ChromaDB','Embeddings']],
+    ['AI Automation & Workflow Integration','Practical automations that connect models, APIs, calendars, data, and human review.',['Python','APIs','Automation']],
+    ['Machine Learning Solutions','Applied predictive systems that turn operational data into useful decisions.',['Python','PyTorch','Pandas']],
+    ['Computer Vision Solutions','Image understanding, detection, segmentation, and review workflows for visual problems.',['YOLO','OpenCV','U-Net']],
+    ['AI Backend & API Development','Production-minded services that make intelligent systems observable and usable.',['FastAPI','PostgreSQL','Docker']]
+  ];
+  $$('#services .expert-card').forEach((card,index)=>{const service=serviceContent[index];if(!service)return;const title=$('h3',card);const description=$('p',card);const tags=$('.pill-row',card);if(title)title.textContent=service[0];if(description)description.textContent=service[1];if(tags)tags.replaceChildren(...service[2].map(tag=>{const node=document.createElement('span');node.textContent=tag;return node;}));});
+  const servicesTitle=$('#expertiseTitle');if(servicesTitle)servicesTitle.innerHTML='Services.<br><em>Built for impact.</em>';
+
   // Intro, cards, and sections enter elegantly as they reach the viewport.
   const els = $$('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion) {
@@ -283,6 +317,12 @@
     }, { threshold: .09, rootMargin: '0px 0px -28px 0px' });
     els.forEach(el => observer.observe(el));
   } else els.forEach(el => el.classList.add('visible'));
+
+  if ('IntersectionObserver' in window) {
+    const aliases={services:'services',portfolio:'portfolio',experience:'portfolio',cv:'cv',kaggle:'portfolio',contact:'blog'};
+    const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;const activeId=aliases[entry.target.id]||entry.target.id;$$('.desktop-nav a, .mobile-nav a').forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${activeId}`));}),{rootMargin:'-25% 0px -65% 0px'});
+    $$('main section[id]').forEach(section=>sectionObserver.observe(section));
+  }
 
   let scrollPending = false;
   const onScroll = () => {

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Building RAG Systems That Stay Useful",
+    "category": "LLMs & RAG",
+    "date": "2026-10-27",
+    "readingTime": "5 min",
+    "excerpt": "Retrieval quality, grounded answers, and the small product decisions that make a RAG assistant genuinely useful.",
+    "featuredImage": "../assets/blog-rag.svg",
+    "slug": "building-rag-systems-that-stay-useful",
+    "source": "posts/building-rag-systems-that-stay-useful.md"
+  },
+  {
+    "title": "From Automation to Agentic Workflows",
+    "category": "Agentic AI",
+    "date": "2026-10-27",
+    "readingTime": "4 min",
+    "excerpt": "A practical way to decide when a deterministic workflow should become an agentic system.",
+    "featuredImage": "../assets/blog-agents.svg",
+    "slug": "from-automation-to-agentic-workflows",
+    "source": "posts/from-automation-to-agentic-workflows.md"
+  }
+]

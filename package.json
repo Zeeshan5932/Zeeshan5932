@@ -1,0 +1,7 @@
+{
+  "name": "zeeshan-younas-portfolio",
+  "private": true,
+  "scripts": {
+    "build:blog": "node scripts/generate-blog.mjs"
+  }
+}

@@ -16,6 +16,8 @@ A custom, responsive, black-and-gold portfolio created from `Zeeshan_Younas_CV.p
 - Skills and technology stack
 - Four project showcases with illustrative UI visuals and functional category filters
 - Work experience, Kaggle achievement, hackathon award and education
+- Curated GitHub portfolio with verified repository links and conceptual visuals labeled clearly
+- Markdown-backed blog workflow with generated listing and dedicated article pages
 - Email contact button, email-copy feature, social links and CV download
 - Keyboard-accessible navigation and reduced-motion support
 
@@ -26,12 +28,16 @@ A custom, responsive, black-and-gold portfolio created from `Zeeshan_Younas_CV.p
 - `script.js` — interactive features
 - `assets/favicon.svg` — brand icon
 - `assets/Zeeshan_Younas_CV.pdf` — downloadable resume
+- `blog/posts/` — Markdown source posts
+- `scripts/generate-blog.mjs` — static blog generator
+- `BLOG_GUIDE.md` — publishing instructions
 
 ## Customize
 
 Edit `index.html` to update the biography, projects, contact details and social links.
 Update the `:root` color variables at the top of `styles.css` to change the color palette.
 Place images in `assets` if you want to replace the CSS-rendered conceptual project interfaces with real project screenshots.
+Create Markdown files in `blog/posts/` and run `npm run build:blog` to generate the blog listing and article pages.
 
 ## Publish
 
